@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Shetkari Saathi | शेतकरी साथी</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&family=Rajdhani:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="scanlines"></div>
+  <div class="grid-bg"></div>
+
+  <header>
+    <div class="header-inner">
+      <div class="logo-block">
+        <span class="logo-icon">⬡</span>
+        <div>
+          <div class="logo">SHETKARI SAATHI</div>
+          <div class="tagline">शेतकरी साथी — कृषी AI सहाय्यक</div>
+        </div>
+      </div>
+      <div class="status-badge"><span class="dot"></span>SYSTEM ONLINE</div>
+    </div>
+  </header>
+
+  <main>
+    <!-- Region -->
+    <div class="control-bar">
+      <div class="control-group">
+        <label class="bar-label">▶ REGION //</label>
+        <div class="btn-group" id="regionGroup">
+          <button class="region-btn active" onclick="setRegion(this,'Vidarbha')">विदर्भ</button>
+          <button class="region-btn" onclick="setRegion(this,'Marathwada')">मराठवाडा</button>
+          <button class="region-btn" onclick="setRegion(this,'Konkan')">कोकण</button>
+          <button class="region-btn" onclick="setRegion(this,'Western Maharashtra')">पश्चिम महाराष्ट्र</button>
+          <button class="region-btn" onclick="setRegion(this,'Nashik')">नाशिक</button>
+        </div>
+      </div>
+
+      <div class="control-group">
+        <label class="bar-label">▶ LANGUAGE //</label>
+        <div class="btn-group" id="langGroup">
+          <button class="lang-btn active" onclick="setLang(this,'mr')">मराठी</button>
+          <button class="lang-btn" onclick="setLang(this,'hi')">हिंदी</button>
+          <button class="lang-btn" onclick="setLang(this,'en')">English</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Chat -->
+    <div class="terminal-header">
+      <span>// CHAT TERMINAL v2.0</span>
+      <span class="blink">█</span>
+    </div>
+    <div class="chat-box" id="chatBox">
+      <div class="message bot">
+        <span class="sender">SAATHI_BOT</span>
+        <span id="welcomeMsg">नमस्कार शेतकरी! मी शेतकरी साथी AI आहे. तुमच्या शेतीसाठी मी येथे आहे. खाली दिलेले प्रश्न विचारा किंवा स्वतःचा प्रश्न टाइप करा. 🌱</span>
+      </div>
+    </div>
+
+    <!-- Quick Buttons -->
+    <div class="quick-label">▶ QUICK QUERIES //</div>
+    <div class="quick-btns" id="quickBtns">
+      <button onclick="quickAsk(0)">🌾 <span>पीक सल्ला</span></button>
+      <button onclick="quickAsk(1)">🐛 <span>कीड नियंत्रण</span></button>
+      <button onclick="quickAsk(2)">💰 <span>बाजार भाव</span></button>
+      <button onclick="quickAsk(3)">🏔️ <span>जमीन सुधारणा</span></button>
+      <button onclick="quickAsk(4)">🌦️ <span>हवामान</span></button>
+    </div>
+
+    <!-- Input -->
+    <div class="input-area">
+      <span class="prompt-sym">▶</span>
+      <input type="text" id="userInput" placeholder="प्रश्न टाइप करा... / Type your question..." />
+      <button id="sendBtn" onclick="sendMessage()">SEND →</button>
+    </div>
+  </main>
+
+  <footer>
+    © 2026 SHETKARI SAATHI // BUILT FOR MAHARASHTRA FARMERS
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
